@@ -32,7 +32,6 @@
 {% endfor %}
 
 {% do node_config.update({ 'id': salt['pillar.get']('netbox:custom_fields:node_id') }) %}                    
-
 bird-pkg:
   pkg.installed:
     - name: bird
