@@ -57,6 +57,7 @@ ifreload:
 {% if vrf %}
   file.managed:
     - source: salt://network/interfaces/ff_fix_default_route.cron
+    - template: jinja
 {% else %}
   file.absent
 {% endif %}
